@@ -14,7 +14,7 @@ export function Providers(props: {
   const [queryClient] = useState(() => new QueryClient());
   const apiKey =
     typeof window !== 'undefined'
-      ? window.ENV?.PUBLIC_ONCHAINKIT_API_KEY
+      ? process.env.PUBLIC_ONCHAINKIT_API_KEY
       : undefined; 
  
   return (
